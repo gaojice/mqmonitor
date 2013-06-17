@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+
+	<display-name>mqmonitor</display-name>
+	
+	<servlet>
+		<servlet-name>gatherData</servlet-name>
+		<servlet-class>com.zendaimoney.mqmonitor.command.Command</servlet-class>
+		<init-param>
+			<param-name>mongoIp</param-name>
+			<param-value>172.16.220.213</param-value>
+		</init-param>
+		<init-param>
+			<param-name>mongoPort</param-name>
+			<param-value>27017</param-value>
+		</init-param>
+		<init-param>
+			<param-name>monitInterval</param-name>
+			<param-value>5000</param-value>
+		</init-param>
+		<init-param>
+			<param-name>cmdCommand</param-name>
+			<param-value>cmd.exe /C  D:/apache-activemq-5.7.0/bin/activemq-admin.bat bstat</param-value>
+		</init-param>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>gatherData</servlet-name>
+		<url-pattern>/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>dataServlet</servlet-name>
+		<servlet-class>com.zendaimoney.mqmonitor.web.servlet.DataServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dataServlet</servlet-name>
+		<url-pattern>/data</url-pattern>
+	</servlet-mapping>
+
+</web-app>

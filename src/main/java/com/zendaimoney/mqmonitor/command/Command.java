@@ -31,6 +31,9 @@ public class Command extends HttpServlet {
 
 	@Override
 	public void init() {
+		System.setProperty("DEBUG.MONGO", "true");
+
+		System.setProperty("DB.TRACE", "true");
 		Command.mongoIp=getInitParameter("mongoIp");
 		Command.mongoPort=Integer.valueOf(getInitParameter("mongoPort"));
 		Command.monitInterval=Long.valueOf(getInitParameter("monitInterval"));

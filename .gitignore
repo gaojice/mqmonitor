@@ -26,3 +26,5 @@ target/**
 # PDT-specific
 .buildpath
 
+/target
+/bin

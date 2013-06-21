@@ -26,6 +26,7 @@ public class MongoService {
 		DB db = mongoClient.getDB("queueInfo");
 		DBCollection dbCollection = db.getCollection("queueInfoColls");
 		BasicDBObject query = new BasicDBObject();
+		query.put("time", new BasicDBObject("$gte", start).append("$lte", end)); 
 		DBCursor cursor = dbCollection.find(query);
 		try {
 			while (cursor.hasNext()) {

@@ -10,7 +10,7 @@
 		<servlet-class>com.zendaimoney.mqmonitor.command.Command</servlet-class>
 		<init-param>
 			<param-name>mongoIp</param-name>
-			<param-value>172.16.220.213</param-value>
+			<param-value>localhost</param-value>
 		</init-param>
 		<init-param>
 			<param-name>mongoPort</param-name>
@@ -22,7 +22,7 @@
 		</init-param>
 		<init-param>
 			<param-name>cmdCommand</param-name>
-			<param-value>cmd.exe /C  D:/apache-activemq-5.7.0/bin/activemq-admin.bat bstat</param-value>
+			<param-value>/Users/gaojice/Application/apache-activemq-5.5.1/bin/activemq-admin bstat</param-value>
 		</init-param>
 		<load-on-startup>0</load-on-startup>
 	</servlet>

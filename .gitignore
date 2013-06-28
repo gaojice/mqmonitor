@@ -1,6 +1,7 @@
 *.pydevproject
 .project
 .tomcatplugin
+*.#webclasspath
 .metadata
 bin/**
 tmp/**

@@ -22,7 +22,7 @@
 		</init-param>
 		<init-param>
 			<param-name>cmdCommand</param-name>
-			<param-value>/Users/gaojice/Application/apache-activemq-5.5.1/bin/activemq-admin bstat</param-value>
+			<param-value>http://localhost:8161/api/jolokia/read/org.apache.activemq:type=Broker,brokerName=localhost,destinationType=Queue,destinationName=</param-value>
 		</init-param>
 		<load-on-startup>0</load-on-startup>
 	</servlet>

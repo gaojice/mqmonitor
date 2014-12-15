@@ -1,7 +1,6 @@
 language: java
 script:
-- mvn test
-- mvn test -Pfunctional-test -Dselenium.driver=firefox
+- mvn package
 env: MAVEN_OPTS="-XX:MaxPermSize=128m"
 addons:
   firefox: "26.0"
